@@ -4,5 +4,37 @@
     box-sizing: border-box;
 }
 body {
-    color: red;
+    width: 100%;
+    max-width: 50em;
+    margin: auto;
+    background-color: #cdedf6;
+}
+header {
+    height: 40px;
+    padding: 2rem;
+}
+h1 {
+    text-align: center;
+}
+.grille {
+    display: grid;
+    padding: 2rem;
+    background-color: #F8FDFF;
+    border-radius: 0.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 4rem auto;
+    color: #f8fdff;
+    font-size: 5rem;
+}
+
+.grille > * {
+    aspect-ratio: 2/3;
+    background-color: #5eb1bf;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }

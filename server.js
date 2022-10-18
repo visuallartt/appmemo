@@ -9,13 +9,6 @@ app.set('view engine', 'ejs')
 
 // Code
 
-// let myobject = {
-//     nom: 'monobjet',
-//     valeur: 10
-// }
-
-// let personne = {};
-
 // let bodyparser = require('body-parser');
 // app.use(bodyparser.urlencoded({ extended : false }));
 // app.use(bodyparser.json());
@@ -42,9 +35,6 @@ app.listen(port, () => {
 
 app.get('/', (req, res, next) => {
     res.render('index.ejs');
-})
-app.get('/results', (req, res, next) => {
-    res.render('results.ejs');
 })
 
 app.get('/login', (req, res, next) => {
