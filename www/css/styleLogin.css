@@ -1,3 +1,20 @@
-p{
-    color: green;
-}
+form{
+    padding: 25px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+input{
+    border-radius: 10px;
+    background-color: #5eb1bf;
+    color: white;
+    border: 2px solid #5eb1bf;
+    height: 3vh;
+    width: 20vw;
+    }
+input:hover{
+    border: 2px solid #5eb1bf;
+    color: #5eb1bf;
+    background-color: white;
+    }
+
