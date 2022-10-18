@@ -9,24 +9,19 @@ app.set('view engine', 'ejs')
 
 // Code
 
-// let myobject = {
-//     nom: 'monobjet',
-//     valeur: 10
-// }
+let player = {};
 
-// let personne = {};
-
-// let bodyparser = require('body-parser');
-// app.use(bodyparser.urlencoded({ extended : false }));
-// app.use(bodyparser.json());
+let bodyparser = require('body-parser');
+app.use(bodyparser.urlencoded({ extended : false }));
+app.use(bodyparser.json());
 
 // Affichage des pages
 
-// app.post('/page3', (req, res, next) => {
-//     console.log(req.body.user_name);
-//     personne.nom = req.body.user_name;
-//     res.redirect('/page4');
-// })
+app.post('/login', (req, res, next) => {
+    console.log(req.body.pseudo);
+    player.name = req.body.pseudo;
+    res.redirect('/');
+})
 
 app.listen(port, () => {
     console.log('Le serveur est en route');
@@ -41,7 +36,7 @@ app.listen(port, () => {
 // })
 
 app.get('/', (req, res, next) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {joueur: player.name});
 })
 app.get('/results', (req, res, next) => {
     res.render('results.ejs');
