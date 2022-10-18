@@ -47,9 +47,9 @@ app.get('/results', (req, res, next) => {
     res.render('results.ejs');
 })
 
-// app.get('/page2', (req, res, next) => {
-//     res.render('page2.ejs', {monobjet: myobject});
-// })
+app.get('/login', (req, res, next) => {
+    res.render('login.ejs');
+})
 // app.get('/page3', (req, res, next) => {
 //     res.render('page3.ejs');
 // })
