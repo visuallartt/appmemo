@@ -24,7 +24,7 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 0.5rem;
     max-width: 500px;
-    margin: 4rem auto;
+    margin: 2rem auto;
     color: #f8fdff;
     font-size: 5rem;
 }
@@ -37,4 +37,10 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transform: rotateZ('180deg');
+    transition: all 2s;
+}
+
+.turn {
+    
 }
