@@ -48,69 +48,28 @@ function match(cardOne, cardTwo) {
     }
 }
 
-/*Timer*/
-class Timer {
-    constructor() {
-        this.isRunning = false;
-        this.startTime = 0;
-        this.overallTime = 0;
-    }
+//timer
+const departMinutes = 1
+        let temps = departMinutes * 60
 
-    _getTimeElapsedSinceLastStart() {
-        if (!this.startTime) {
-            return 0;
-        }
+        const timerElement = document. getElementById("time")
 
-        return Date.now() - this.startTime;
-    }
+        setInterval(() => {
+        let minutes = parseInt(temps / 60, 10)
+        let secondes = parseInt(temps % 60, 10)
 
-    start() {
-        if (this.isRunning) {
-            return console.error('Timer is already running');
-        }
+        minutes = minutes < 10 ? "0" + minutes : minutes
+        secondes = secondes < 10 ? "0" + secondes : secondes
 
-        this.isRunning = true;
-
-        this.startTime = Date.now();
-    }
-
-    stop() {
-        if (!this.isRunning) {
-            return console.error('Timer is already stopped');
-        }
-
-        this.isRunning = false;
-
-        this.overallTime = this.overallTime + this._getTimeElapsedSinceLastStart();
-    }
-
-    reset() {
-        this.overallTime = 0;
-
-        if (this.isRunning) {
-            this.startTime = Date.now();
-            return;
-        }
-
-        this.startTime = 0;
-    }
-
-    getTime() {
-        if (!this.startTime) {
-            return 0;
-        }
-
-        if (this.isRunning) {
-            return this.overallTime + this._getTimeElapsedSinceLastStart();
-        }
-
-        return this.overallTime;
-    }
-}
-
+<<<<<<< HEAD
 const timer = new Timer();
 timer.start();
 setInterval(() => {
     const timeInSeconds = Math.round(timer.getTime() / 1000);
     document.getElementById('time').innerText = timeInSeconds;
 }, 100)
+=======
+        timerElement.innerText = `${minutes}:${secondes}`
+        temps = temps <= 0 ? 0 : temps - 1
+        }, 1000)
+>>>>>>> e875f26699da3f572d8dd404257aef05083e71f5

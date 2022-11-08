@@ -1,4 +1,11 @@
-<form method="post" name="log_form">
-    <input type="text" name="pseudo" id="pseudo">
-    <input type="submit" value="Jouer !">
-</form>
+<%- include('header'); %>
+
+<div class="container">
+    <form action="" method="get" name="log_form">
+        <h1>Memory</h1>
+        <h2>Entrez votre pseudo</h2>
+        <input type="text" name="pseudo" id="pseudo" required placeholder="Jaco">
+        <input type="submit" value="Jouer !" id="play">
+    </form>
+</div>
+<%- include('footer'); %>

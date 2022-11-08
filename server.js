@@ -9,7 +9,9 @@ app.set('view engine', 'ejs')
 
 // Code
 
-let player = {};
+let player = {
+    name: 'John'
+};
 
 let bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({ extended : false }));
@@ -36,7 +38,11 @@ app.listen(port, () => {
 // })
 
 app.get('/', (req, res, next) => {
-    res.render('index.ejs', {joueur: player.name});
+    res.render('login.ejs');
+})
+
+app.get('/game', (req, res, next) => {
+    res.render('index.ejs', {player: player.name});
 })
 
 app.get('/login', (req, res, next) => {
