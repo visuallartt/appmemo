@@ -112,5 +112,5 @@ const timer = new Timer();
 timer.start();
 setInterval(() => {
     const timeInSeconds = Math.round(timer.getTime() / 1000);
-    document.getElementsByClassName('time').innerText = timeInSeconds;
+    document.getElementById('time').innerText = timeInSeconds;
 }, 100)
