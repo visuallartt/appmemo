@@ -9,9 +9,7 @@ app.set('view engine', 'ejs')
 
 // Code
 
-let player = {
-    name: 'John'
-};
+let player = {}
 
 let bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({ extended : false }));
@@ -22,7 +20,7 @@ app.use(bodyparser.json());
 app.post('/login', (req, res, next) => {
     console.log(req.body.pseudo);
     player.name = req.body.pseudo;
-    res.redirect('/');
+    res.redirect('/game');
 })
 
 app.listen(port, () => {
@@ -30,27 +28,14 @@ app.listen(port, () => {
     console.log(`Serveur listening at http://localhost:${port}`);
 })
 
-// app.get('/', (req, res, next) => {
-//     res.send('Bonjour');
-// })
-// app.get('/', (req, res, next) => {
-//     res.sendFile('www/index.html');
-// })
-
 app.get('/', (req, res, next) => {
     res.render('login.ejs');
 })
 
 app.get('/game', (req, res, next) => {
-    res.render('index.ejs', {player: player.name});
+    res.render('index.ejs', {player: player});
 })
 
 app.get('/login', (req, res, next) => {
     res.render('login.ejs');
 })
-// app.get('/page3', (req, res, next) => {
-//     res.render('page3.ejs');
-// })
-// app.get('/page4', (req, res, next) => {
-//     res.render('page4.ejs', {personne: personne});
-// })
