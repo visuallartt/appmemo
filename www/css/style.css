@@ -112,7 +112,7 @@ form{
     box-shadow: 10px 10px 10px 1px rgba(36, 36, 39, 0.075);
 }
 
-input{
+input, a{
     border-radius: 50px;
     background-color: cornflowerblue;
     color: white;
@@ -126,8 +126,12 @@ input{
     margin: 1rem;
 }
 
-input:hover{
+input:hover, a:hover{
     border: 2px solid greenyellow;
+}
+a{
+    text-decoration: none;
+    text-align: center;
 }
 
 #pseudo{
@@ -146,4 +150,15 @@ input:hover{
 
 h2{
     color: cornflowerblue;
+}
+
+table{
+    color:darkslateblue;
+    border:1px solid white;
+    border-radius: 10px;
+    background-color:white;
+
+}
+td{
+    padding:1rem 2rem;
 }
