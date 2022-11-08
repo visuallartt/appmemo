@@ -1,9 +1,11 @@
 
+/*Cards*/
 const card = document.querySelectorAll(".card")
 
 randomCard()
 clickCard()
 
+/*Création aléatoire cartes*/
 function randomCard() {
 
     card.forEach(e => {
@@ -14,6 +16,7 @@ function randomCard() {
 
 }
 
+/*Comportement cards au clique dessus*/
 function clickCard() {
 
     for (let i = 0; i < card.length; i++) {
@@ -29,6 +32,7 @@ function clickCard() {
     }
 }
 
+/*Comportement jeu lorsque les cartes correspondent ou non*/
 function match(cardOne, cardTwo) {
     if (cardOne.dataset.index === cardTwo.dataset.index) {
         cardOne.classList.remove('flip')

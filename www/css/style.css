@@ -14,7 +14,6 @@ body {
 .container {
     width: 100%;
     max-width: 40em;
-    border-radius: 20%;
     margin: 0 auto;
     height: 100vh;
     display: flex;
@@ -100,4 +99,54 @@ body {
 .match {
     border: 2px solid greenyellow;
     pointer-events: none;
+}
+
+form{
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 70vh;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px 1px rgba(36, 36, 39, 0.075);
+}
+
+input{
+    border-radius: 50px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid aliceblue;
+    height: 3vh;
+    width: 10vw;
+    border: 2px solid cornflowerblue;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+input:hover{
+    border: 2px solid greenyellow;
+}
+
+#pseudo{
+    width: 30vw;
+    padding-left: 1rem;
+    margin-top: 8rem;
+}
+
+#play{
+    height: 3.7vh;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.541);
+}
+
+h2{
+    color: cornflowerblue;
 }
