@@ -4,5 +4,146 @@
     box-sizing: border-box;
 }
 body {
-    color: red;
+    background-color: darkslateblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 40em;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+.head h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 2.3rem;
+}
+.head .score {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 3rem;
+    background-color: aliceblue;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+#time {
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+
+.card {
+    aspect-ratio: 1;
+    width: 20vw;
+    max-width: 150px;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+    cursor: pointer;
+}
+.card::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    z-index: 10;
+    transition: all 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
+    opacity: 1;
+}
+.card span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: cornflowerblue;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: aliceblue;
+}
+
+.flip::before {
+    opacity: 0;
+}
+.match::before {
+    opacity: 0;
+}
+.match {
+    border: 2px solid greenyellow;
+    pointer-events: none;
+}
+
+form{
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 70vh;
+    flex-direction: column;
+    box-shadow: 10px 10px 10px 1px rgba(36, 36, 39, 0.075);
+}
+
+input{
+    border-radius: 50px;
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid aliceblue;
+    height: 3vh;
+    width: 10vw;
+    border: 2px solid cornflowerblue;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+input:hover{
+    border: 2px solid greenyellow;
+}
+
+#pseudo{
+    width: 30vw;
+    padding-left: 1rem;
+    margin-top: 8rem;
+}
+
+#play{
+    height: 3.7vh;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.541);
+}
+
+h2{
+    color: cornflowerblue;
 }
