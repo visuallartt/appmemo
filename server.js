@@ -18,8 +18,8 @@ app.use(bodyparser.json());
 // Affichage des pages
 
 app.post('/login', (req, res, next) => {
-    console.log(req.body.pseudo);
-    player.name = req.body.pseudo;
+    console.log(req.body.player);
+    player.name = req.body.player;
     res.redirect('/game');
 })
 
