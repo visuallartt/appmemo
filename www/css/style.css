@@ -90,3 +90,14 @@ body {
     font-size: 4rem;
     color: aliceblue;
 }
+
+.flip::before {
+    opacity: 0;
+}
+.match::before {
+    opacity: 0;
+}
+.match {
+    border: 2px solid greenyellow;
+    pointer-events: none;
+}
