@@ -46,7 +46,7 @@ body {
     font-weight: bold;
     border-radius: 2rem;
 }
-.head .time {
+#time {
     font-size: 3rem;
     color: aliceblue;
 }
