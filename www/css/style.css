@@ -25,6 +25,32 @@ body {
     padding: 2rem;
 }
 
+.head {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: center;
+}
+.head h1 {
+    font-weight: normal;
+    color: white;
+    font-size: 2.3rem;
+}
+.head .score {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    gap: 3rem;
+    background-color: aliceblue;
+    font-weight: bold;
+    border-radius: 2rem;
+}
+.head .time {
+    font-size: 3rem;
+    color: aliceblue;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
