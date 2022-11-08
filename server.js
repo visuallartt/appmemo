@@ -38,9 +38,6 @@ app.listen(port, () => {
 app.get('/', (req, res, next) => {
     res.render('index.ejs', {joueur: player.name});
 })
-app.get('/results', (req, res, next) => {
-    res.render('results.ejs');
-})
 
 app.get('/login', (req, res, next) => {
     res.render('login.ejs');
