@@ -61,15 +61,6 @@ const departMinutes = 1
         minutes = minutes < 10 ? "0" + minutes : minutes
         secondes = secondes < 10 ? "0" + secondes : secondes
 
-<<<<<<< HEAD
-const timer = new Timer();
-timer.start();
-setInterval(() => {
-    const timeInSeconds = Math.round(timer.getTime() / 1000);
-    document.getElementById('time').innerText = timeInSeconds;
-}, 100)
-=======
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
         }, 1000)
->>>>>>> e875f26699da3f572d8dd404257aef05083e71f5
