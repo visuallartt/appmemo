@@ -151,11 +151,12 @@ a {
     text-align: center;
 }
 
+/* 
 #pseudo {
     width: 30vw;
     padding-left: 1rem;
     margin-top: 8rem;
-}
+} */
 
 #play {
     height: 3.7vh;
@@ -179,4 +180,15 @@ table {
 
 td {
     padding: 1rem 2rem;
+}
+
+#end {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: darkslateblue;
+    z-index: 40;
 }

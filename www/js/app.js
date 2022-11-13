@@ -3,6 +3,8 @@
 
 const card = document.querySelectorAll(".card")
 const coups = document.querySelector("#coups")
+const pseudo = document.querySelector("#pseudo")
+const end = document.querySelector("#end")
 
 randomCard()
 clickCard()
@@ -74,11 +76,17 @@ if (timerElement) {
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
 
-        if (temps === 0) {
-            console.log('stop')
+        if (temps === 55) {
+
+            let score = {
+                pseudo: pseudo.outerText,
+                coups: parseInt(coups.outerText),
+                time: temps
+            }
+
+            end.style.display = "flex"
         }
     }, 1000)
-
 
 }
 
