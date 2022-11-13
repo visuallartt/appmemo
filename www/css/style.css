@@ -19,8 +19,8 @@ h1 {
 
 .button {
     padding: 1rem 2rem;
-    background-color: cornflowerblue;
-    color: aliceblue;
+    background-color: aliceblue;
+    color: black;
     border-radius: 2rem;
     display: inline-block;
     text-decoration: none;
@@ -29,7 +29,6 @@ h1 {
 }
 
 header {
-    background-color: aliceblue;
     width: 100%;
     height: 80px;
     padding: 0 2rem;
@@ -68,7 +67,6 @@ header {
     border-radius: 2rem;
     font-size: 1.2rem;
     border: 1px solid black;
-    color: darkslateblue;
     text-align: center;
 }
 
@@ -197,10 +195,10 @@ td {
 
 #end {
     position: absolute;
-    top: 0;
+    top: 80px;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 80px);
     display: none;
     background-color: darkslateblue;
     z-index: 40;
