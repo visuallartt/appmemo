@@ -1,8 +1,11 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: darkslateblue;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -28,11 +31,13 @@ body {
     width: 100%;
     align-items: center;
 }
+
 .head h1 {
     font-weight: normal;
     color: white;
     font-size: 2.3rem;
 }
+
 .head .score {
     display: flex;
     justify-content: space-between;
@@ -42,7 +47,12 @@ body {
     font-weight: bold;
     border-radius: 2rem;
 }
-#time {
+
+.head .score div p {
+    display: inline-block;
+}
+
+.head #time {
     font-size: 3rem;
     color: aliceblue;
 }
@@ -61,6 +71,7 @@ body {
     transition: all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
     cursor: pointer;
 }
+
 .card::before {
     content: " ";
     position: absolute;
@@ -73,6 +84,7 @@ body {
     transition: all 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
     opacity: 1;
 }
+
 .card span {
     position: absolute;
     top: 0;
@@ -90,19 +102,21 @@ body {
 .flip::before {
     opacity: 0;
 }
+
 .match::before {
     opacity: 0;
 }
+
 .match {
     border: 2px solid greenyellow;
     pointer-events: none;
 }
 
-form{
+form {
     padding: 25px;
     background: white;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +126,8 @@ form{
     box-shadow: 10px 10px 10px 1px rgba(36, 36, 39, 0.075);
 }
 
-input, a{
+input,
+a {
     border-radius: 50px;
     background-color: cornflowerblue;
     color: white;
@@ -126,39 +141,42 @@ input, a{
     margin: 1rem;
 }
 
-input:hover, a:hover{
+input:hover,
+a:hover {
     border: 2px solid greenyellow;
 }
-a{
+
+a {
     text-decoration: none;
     text-align: center;
 }
 
-#pseudo{
+#pseudo {
     width: 30vw;
     padding-left: 1rem;
     margin-top: 8rem;
 }
 
-#play{
+#play {
     height: 3.7vh;
 }
 
-::placeholder{
+::placeholder {
     color: rgba(255, 255, 255, 0.541);
 }
 
-h2{
+h2 {
     color: cornflowerblue;
 }
 
-table{
-    color:darkslateblue;
-    border:1px solid white;
+table {
+    color: darkslateblue;
+    border: 1px solid white;
     border-radius: 10px;
-    background-color:white;
+    background-color: white;
 
 }
-td{
-    padding:1rem 2rem;
+
+td {
+    padding: 1rem 2rem;
 }

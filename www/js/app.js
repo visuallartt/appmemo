@@ -2,6 +2,7 @@
 /*Constantes*/
 
 const card = document.querySelectorAll(".card")
+const coups = document.querySelector("#coups")
 
 randomCard()
 clickCard()
@@ -35,6 +36,9 @@ function clickCard() {
 /*Comportement jeu lorsque les cartes correspondent ou non*/
 
 function match(cardOne, cardTwo) {
+
+    coups.innerHTML = parseInt(coups.innerHTML) + 1
+
     if (cardOne.dataset.index === cardTwo.dataset.index) {
         cardOne.classList.remove('flip')
         cardTwo.classList.remove('flip')
@@ -57,7 +61,9 @@ let temps = departMinutes * 60
 const timerElement = document.getElementById("time")
 
 if (timerElement) {
+
     console.log('start')
+
     setInterval(() => {
         let minutes = parseInt(temps / 60, 10)
         let secondes = parseInt(temps % 60, 10)
@@ -67,6 +73,9 @@ if (timerElement) {
 
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
+
     }, 1000)
+
+
 }
 
