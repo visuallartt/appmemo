@@ -1,11 +1,13 @@
 
 /*Constantes*/
+
 const card = document.querySelectorAll(".card")
 
 randomCard()
 clickCard()
 
 /*Création aléatoire cartes*/
+
 function randomCard() {
 
     card.forEach(e => {
@@ -16,6 +18,7 @@ function randomCard() {
 }
 
 /*Comportement cards au clique dessus*/
+
 function clickCard() {
 
     for (let i = 0; i < card.length; i++) {
@@ -30,6 +33,7 @@ function clickCard() {
 }
 
 /*Comportement jeu lorsque les cartes correspondent ou non*/
+
 function match(cardOne, cardTwo) {
     if (cardOne.dataset.index === cardTwo.dataset.index) {
         cardOne.classList.remove('flip')
@@ -50,15 +54,19 @@ function match(cardOne, cardTwo) {
 const departMinutes = 1
 let temps = departMinutes * 60
 
-const timerElement = document. getElementById("time")
+const timerElement = document.getElementById("time")
 
-setInterval(() => {
-let minutes = parseInt(temps / 60, 10)
-let secondes = parseInt(temps % 60, 10)
+if (timerElement) {
+    console.log('start')
+    setInterval(() => {
+        let minutes = parseInt(temps / 60, 10)
+        let secondes = parseInt(temps % 60, 10)
 
-minutes = minutes < 10 ? "0" + minutes : minutes
-secondes = secondes < 10 ? "0" + secondes : secondes
+        minutes = minutes < 10 ? "0" + minutes : minutes
+        secondes = secondes < 10 ? "0" + secondes : secondes
 
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
-        }, 1000)
+    }, 1000)
+}
+

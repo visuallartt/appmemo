@@ -1,76 +1,78 @@
 <%- include('header'); %>
 
-<div class="container" id="game">
-    <div class="head">
-        <h1>Memory card</h1>
-        <div class="score">
-            <p><%=player.name%></p>
-            <p>Coups : 0</p>
+    <div class="container" id="game">
+        <div class="head">
+            <h1>Memory card</h1>
+            <div class="score">
+                <p>
+                    <%=player.name%>
+                </p>
+                <p>Coups : 0</p>
+            </div>
+            <div id="time">01:00</div>
         </div>
-        <div id="time">01:00</div>
+        <div class="grid">
+            <div class="card" data-index="1">
+                <span>
+                    <p>🍑</p>
+                </span>
+            </div>
+            <div class="card" data-index="1">
+                <span>
+                    <p>🍑</p>
+                </span>
+            </div>
+            <div class="card" data-index="2">
+                <span>
+                    <p>🍊</p>
+                </span>
+            </div>
+            <div class="card" data-index="2">
+                <span>
+                    <p>🍊</p>
+                </span>
+            </div>
+            <div class="card" data-index="3">
+                <span>
+                    <p>🍒</p>
+                </span>
+            </div>
+            <div class="card" data-index="3">
+                <span>
+                    <p>🍒</p>
+                </span>
+            </div>
+            <div class="card" data-index="4">
+                <span>
+                    <p>🍋</p>
+                </span>
+            </div>
+            <div class="card" data-index="4">
+                <span>
+                    <p>🍋</p>
+                </span>
+            </div>
+            <div class="card" data-index="5">
+                <span>
+                    <p>🍌</p>
+                </span>
+            </div>
+            <div class="card" data-index="5">
+                <span>
+                    <p>🍌</p>
+                </span>
+            </div>
+            <div class="card" data-index="6">
+                <span>
+                    <p>🍉</p>
+                </span>
+            </div>
+            <div class="card" data-index="6">
+                <span>
+                    <p>🍉</p>
+                </span>
+            </div>
+        </div>
     </div>
-    <div class="grid">
-        <div class="card" data-index="1">
-            <span>
-                <p>🍑</p>
-            </span>
-        </div>
-        <div class="card" data-index="1">
-            <span>
-                <p>🍑</p>
-            </span>
-        </div>
-        <div class="card" data-index="2">
-            <span>
-                <p>🍊</p>
-            </span>
-        </div>
-        <div class="card" data-index="2">
-            <span>
-                <p>🍊</p>
-            </span>
-        </div>
-        <div class="card" data-index="3">
-            <span>
-                <p>🍒</p>
-            </span>
-        </div>
-        <div class="card" data-index="3">
-            <span>
-                <p>🍒</p>
-            </span>
-        </div>
-        <div class="card" data-index="4">
-            <span>
-                <p>🍋</p>
-            </span>
-        </div>
-        <div class="card" data-index="4">
-            <span>
-                <p>🍋</p>
-            </span>
-        </div>
-        <div class="card" data-index="5">
-            <span>
-                <p>🍌</p>
-            </span>
-        </div>
-        <div class="card" data-index="5">
-            <span>
-                <p>🍌</p>
-            </span>
-        </div>
-        <div class="card" data-index="6">
-            <span>
-                <p>🍉</p>
-            </span>
-        </div>
-        <div class="card" data-index="6">
-            <span>
-                <p>🍉</p>
-            </span>
-        </div>
-    </div>
-</div>
 
-<%- include('footer'); %>
+    <%- include('footer'); %>

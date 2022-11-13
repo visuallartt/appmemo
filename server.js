@@ -2,7 +2,7 @@ let express = require('express');
 let app = express();
 let port = 3000;
 
-app.use( express.static(__dirname + '/www' ));
+app.use(express.static(__dirname + '/www'));
 app.use('/views', express.static(__dirname + '/views/'));
 
 app.set('view engine', 'ejs')
@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 let player = {}
 
 let bodyparser = require('body-parser');
-app.use(bodyparser.urlencoded({ extended : false }));
+app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 
 // Affichage des pages
@@ -33,7 +33,7 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/game', (req, res, next) => {
-    res.render('index.ejs', {player: player});
+    res.render('index.ejs', { player: player });
 })
 
 app.get('/login', (req, res, next) => {
