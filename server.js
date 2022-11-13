@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 
 // Code
 
-let player = {}
+let pseudo = 'test'
 
 let bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -18,8 +18,13 @@ app.use(bodyparser.json());
 // Affichage des pages
 
 app.post('/login', (req, res, next) => {
-    console.log(req.body.player);
-    player.name = req.body.player;
+    console.log(req.body.pseudo);
+    pseudo = req.body.pseudo;
+    res.redirect('/game');
+})
+app.post('/', (req, res, next) => {
+    console.log(req.body.pseudo);
+    pseudo = req.body.pseudo;
     res.redirect('/game');
 })
 
@@ -29,11 +34,11 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res, next) => {
-    res.render('login.ejs');
+    res.render('login.ejs', { pseudo: pseudo });
 })
 
 app.get('/game', (req, res, next) => {
-    res.render('index.ejs', { player: player });
+    res.render('index.ejs', { pseudo: pseudo });
 })
 
 app.get('/login', (req, res, next) => {

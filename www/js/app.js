@@ -76,7 +76,7 @@ if (timerElement) {
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
 
-        if (temps === 55) {
+        if (temps === 0) {
 
             let score = {
                 pseudo: pseudo.outerText,
