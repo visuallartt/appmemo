@@ -17,6 +17,13 @@ h1 {
     color: white;
 }
 
+h2 {
+    font-size: 1.7rem;
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
 .button {
     padding: 1rem 2rem;
     background-color: aliceblue;
@@ -51,7 +58,7 @@ header {
 
 .container-form {
     background-color: aliceblue;
-    padding: 3rem 2rem;
+    padding: 3rem;
     border-radius: 2rem;
     text-align: center;
 }
@@ -72,13 +79,6 @@ header {
 
 .container-form form input:focus-visible {
     border-color: greenyellow;
-}
-
-.container-form form label {
-    font-size: 1.7rem;
-    color: cornflowerblue;
-    font-weight: bold;
-    padding-bottom: 1rem;
 }
 
 ::placeholder,
@@ -176,11 +176,6 @@ header {
     pointer-events: none;
 }
 
-
-h2 {
-    color: cornflowerblue;
-}
-
 table {
     color: darkslateblue;
     border: 1px solid white;
@@ -202,4 +197,29 @@ td {
     display: none;
     background-color: darkslateblue;
     z-index: 40;
+}
+
+#end .container-form div {
+    font-size: 1.3rem;
+    line-height: 150%;
+    margin-bottom: 2rem;
+}
+
+#end .container-form div p strong {
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+#end .container-form form {
+    margin-bottom: 1rem;
+}
+
+#end .container-form a {
+    display: block;
+    padding: 1rem 2rem;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 2rem;
 }

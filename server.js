@@ -10,6 +10,7 @@ app.set('view engine', 'ejs')
 // Code
 
 let pseudo = 'test'
+let game = {}
 
 let bodyparser = require('body-parser');
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -27,6 +28,15 @@ app.post('/', (req, res, next) => {
     pseudo = req.body.pseudo;
     res.redirect('/game');
 })
+app.post('/game', (req, res, next) => {
+    console.log(req.body.pseudo, req.body.coups, req.body.temps);
+    game = {
+        pseudo: req.body.pseudo,
+        coups: req.body.coups,
+        temps: req.body.temps,
+    };
+    res.redirect('/results');
+})
 
 app.listen(port, () => {
     console.log('Le serveur est en route');
@@ -34,7 +44,7 @@ app.listen(port, () => {
 })
 
 app.get('/', (req, res, next) => {
-    res.render('login.ejs', { pseudo: pseudo });
+    res.render('login.ejs');
 })
 
 app.get('/game', (req, res, next) => {
@@ -46,7 +56,7 @@ app.get('/login', (req, res, next) => {
 })
 
 app.get('/results', (req, res, next) => {
-    res.render('results.ejs');
+    res.render('results.ejs', { game: game });
 })
 
 // app.get('/page3', (req, res, next) => {

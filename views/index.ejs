@@ -80,10 +80,20 @@
 
     <div id="end">
         <div class="container">
-            <h2 id="endText">C'est Gagné test !</h2>
-            <div>
-                <p id="endCoups">Nombre de Coups : test</p>
-                <p id="endTemps">Temps restant : test</p>
+            <h1>Memory Game</h1>
+            <div class="container-form">
+                <h2 id="endText">Partie en cours...</h2>
+                <div>
+                    <p id="endCoups">Partie en cours...</p>
+                    <p id="endTemps">Partie en cours...</p>
+                </div>
+                <form method="post">
+                    <input type="hidden" name="pseudo" id="inputPseudo" value="">
+                    <input type="hidden" name="coups" id="inputCoups" value="">
+                    <input type="hidden" name="temps" id="inputTemps" value="">
+                    <input type="submit" value="Tableau des scores">
+                </form>
+                <a class="button-alt" href="/">Rejouer !</a>
             </div>
         </div>
     </div>

@@ -4,7 +4,15 @@
 const card = document.querySelectorAll(".card")
 const coups = document.querySelector("#coups")
 const pseudo = document.querySelector("#pseudo")
+
 const end = document.querySelector("#end")
+const endText = document.querySelector("#endText")
+const endTemps = document.querySelector("#endTemps")
+const endCoups = document.querySelector("#endCoups")
+
+const inputPseudo = document.querySelector("#inputPseudo")
+const inputCoups = document.querySelector("#inputCoups")
+const inputTemps = document.querySelector("#inputTemps")
 
 //timer
 
@@ -27,7 +35,7 @@ if (timerElement) {
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
 
-        if (temps === 0) {
+        if (temps === 58) {
             endScreen(pseudo, coups, temps)
         }
 
@@ -88,10 +96,6 @@ function match(cardOne, cardTwo) {
     }
 }
 
-const endText = document.querySelector("#endText")
-const endTemps = document.querySelector("#endTemps")
-const endCoups = document.querySelector("#endCoups")
-
 function endScreen(pseudo, coups, temps) {
 
     if (temps > 0) {
@@ -101,9 +105,13 @@ function endScreen(pseudo, coups, temps) {
         endText.innerHTML = `C'est perdu ${pseudo.innerHTML} 🙄`
     }
 
-    endCoups.innerHTML = `Nombres de coups : ${parseInt(coups.innerHTML)}`
-    endTemps.innerHTML = `Temps restant : ${temps} secondes`
+    endCoups.innerHTML = `Nombres de coups : <strong>${parseInt(coups.innerHTML)}</strong>`
+    endTemps.innerHTML = `Temps restant : <strong>${temps}s</strong>`
 
+    inputPseudo.value = pseudo.innerHTML
+    inputCoups.value = parseInt(coups.innerHTML)
+    inputTemps.value = temps
+
+    console.log(inputPseudo, inputCoups, inputTemps)
     end.style.display = "flex"
 }
-
