@@ -74,6 +74,9 @@ if (timerElement) {
         timerElement.innerText = `${minutes}:${secondes}`
         temps = temps <= 0 ? 0 : temps - 1
 
+        if (temps === 0) {
+            console.log('stop')
+        }
     }, 1000)
 
 
